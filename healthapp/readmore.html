@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read More Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="article">
+    <h2>Article Title</h2>
+    <div class="content">
+        <!-- Initially empty, content will be loaded here -->
+    </div>
+    <p class="read-more">Read more</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var readMoreBtn = document.querySelector('.read-more');
+    var content = document.querySelector('.content');
+    var contentLoaded = false; // Flag to track whether content has been loaded
+
+    readMoreBtn.addEventListener('click', function() {
+        if (!contentLoaded) {
+            // Load content from external file
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        content.innerHTML = xhr.responseText;
+                        readMoreBtn.textContent = 'Read less';
+                    } else {
+                        console.error('Error loading content:', xhr.status);
+                    }
+                }
+            };
+            xhr.open('GET', 'additional_content.html', true);
+            xhr.send();
+            contentLoaded = true;
+        } else {
+            // Toggle content visibility
+            content.classList.toggle('expanded');
+            if (content.classList.contains('expanded')) {
+                readMoreBtn.textContent = 'Read less';
+            } else {
+                readMoreBtn.textContent = 'Read more';
+            }
+        }
+    });
+});
+
+</script>

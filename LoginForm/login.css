@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    background: linear-gradient(-45deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #4ef056, #e9f474, #f9a825, #ff5722);
+    background-size: 350% 400%;
+    animation:gradient 15s ease infinite; 
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    display:flex;
+    padding-top: 85px;
+}
+.container1{
+    width:500px;
+    height:500px;
+    background-color:transparent;
+    opacity:1px;
+    border:2px solid white;
+    display:flex;
+    flex-direction:column;
+    padding:45px;
+    border-radius:25px 0px;
+} 
+.container1{
+    background:rgba(255, 255, 255, 0.2);
+    border-radius: 25px 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0 ,0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border:1px solid rgba(255, 255, 255, 0.3);
+
+}
+.container1:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.container1 i:hover{
+    text-align: center;
+    /* font-style: italic; */
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container1 i{
+    font-size: 35px;
+    color:black;
+    text-align: center;
+}
+.container1 label{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color:black;
+}
+.container1 input{
+    border-bottom:1px solid white ;
+    color:black;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+.container1 .btn{
+    font-size: 1.6rem;
+    -moz-box-align:stretch;
+    padding:4px;
+    color:black;
+    font-weight: 340px;
+    background-color: transparent;
+    border:2px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container1 .btn:hover{
+    background-color: black;
+    color:white;
+    box-shadow: #0ef 0px 8px 15px;
+}
+.container1 a{
+    color:black;
+    text-align:left;
+    font-size: 20px;
+}
+.container1 a:hover{
+    color:blue;
+    text-shadow: #0ef 0px 3px 7px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

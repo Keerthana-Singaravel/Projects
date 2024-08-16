@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(50deg, rgb(247, 83, 178), rgb(193, 29, 193), rgb(12, 207, 241));
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    min-height: 540px;
+    background: white;
+    margin:50px;
+    padding: 10px 10px;
+    box-shadow: 0 10px 20px rgb(243, 239, 239);
+    cursor: pointer;
+}
+.container:hover{
+     box-shadow: 0px 1px 10px 4px white;
+}
+.top{
+    position: relative;
+    width:100%;
+    height:120px;
+    padding: 50px;
+    background: linear-gradient(50deg, rgb(247, 83, 178), rgb(193, 29, 193), rgb(12, 207, 241));
+}
+.profile-box{
+    position:relative;
+    display: grid;
+    gap:10px;
+    width:100%;
+    /* grid-template-columns: 2fr 3fr; */
+    /* margin-bottom:0px; */
+}
+.profile-box .imgbx{
+    position: relative;
+    width: 90px;
+}
+.profile-box .imgbx img{
+  border-radius: 50%;
+  object-position: 50% 50%;
+ /* / padding: 10px 10px 10px; */
+  margin-left: 100px;
+  margin-right: 50px;
+  width: 100px;
+    /* width: 50px; */
+}
+.profile-box h3{
+    text-align: center;
+}
+.contactinfo{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    gap :0px;
+    margin: 20px 0;
+}
+.contactinfo li{
+    list-style:none;
+    gap: 10px;
+}
+.contactinfo li a{
+    font-weight: bolder;
+}
+.contactinfo li .icon{
+    color:rgb(60, 10, 211);
+}
+.contactinfo li .text{
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+}
+.container1{
+    position: relative;
+    display:grid;
+    width:285px;
+    height:50px;
+    background:transparent;
+}
+.container1{
+    padding:0 30px 40px;
+
+}
+.container1 ul{
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    justify-content: space-between;
+}
+.container1 ul li{
+    list-style: none;
+    color:black;
+    width: calc(100% / 3);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column ;
+    gap:5px;
+    background: transparent;
+    text-align: center;
+    cursor:pointer;
+}
+.container1 ul li:hover{
+    background: linear-gradient(45deg, rgb(242, 9, 184), rgb(131, 5, 131));
+    color:white;
+}
+
+.container1 ul li i{
+    font-size: 2em;
+}

@@ -1,0 +1,590 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <title>e-AGRI Mini Project</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            
+            <a href="#" class="logo"> <i class="fa fa-shopping-basket"></i> e-agri</a>
+            <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#admin">Admin</a>
+            <a href="#farmer">Farmer</a>
+            <a href="#customer">Customer</a>
+            <a href="#features">Features</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contacts</a>
+            
+            </nav>
+            
+            <div class="icons">
+                <div class="fa fa-bars" id="menu-btn"></div>
+                <div class="fa fa-search" id="search-btn"></div>
+                <div class="fa fa-shopping-cart" id="cart-btn"></div>
+                <div class="fa fa-user" id="login-btn"></div>
+            </div>
+            
+            <form class="search-form">
+                 <input type="search" id="search-box" placeholder="Search here...">
+                 <label for="search-box" class="fa fa-search"> </label>
+            </form>
+
+
+            <div class="shopping-cart">
+                <div class="box">
+                    <i class="fa fa-trash"></i>
+                    <img src="images/carrot.jpg" >
+                    <div class="content">
+                        <h3>Carrot 1kg</h3>
+                        <span class="price">rs 25.0 </span>
+                        <span class="quantity">Qty:1</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fa fa-trash"></i>
+                    <img src="images/onion.jpg" >
+                    <div class="content">
+                        <h3>Onion 1kg</h3>
+                        <span class="price">rs 40.0 </span>
+                        <span class="quantity">Qty:1</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fa fa-trash"></i>
+                    <img src="images/tomato.jpg" >
+                    <div class="content">
+                        <h3>Tomato 1kg</h3>
+                        <span class="price">rs `130.0 </span>
+                        <span class="quantity">Qty:1</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fa fa-trash"></i>
+                    <img src="images/bittergourd.jpg" >
+                    <div class="content">
+                        <h3>Bittergourd 1/2kg</h3>
+                        <span class="price">rs 30.0 </span>
+                        <span class="quantity">Qty:1</span>
+                    </div>
+                </div>
+
+                <div class="total">Total : rs 125.0</div>
+                <a href="#" class="btn">Checkout</a>
+            </div>
+
+
+            <form action="#" class="login-form">
+                <h3>Login</h3>
+                <input type="email" placeholder="your email" class="box">
+                <input type="password" placeholder="your password" class="box">
+
+                <p>Forget Password <a href="#">Click here</a></p>
+                <p>Don't have an account <a href="#">Create now</a></p>
+
+
+                <input type="submit" value="login now" class="btn">
+            </form>
+
+        </header>
+
+        <!--home section-->
+            <section class="home" id="home">
+                <!-- <img src="images/banner-img.jpg"> -->
+                <div class="content">
+                    <h3><span>Fresh</span> And <span>Organic</span> Products For You</h3>
+                    <p>This website is designed to get products directly from the natural farm and without any extra payments.</p>
+
+                    <a href="#" class="btn">shop now</a>
+                </div>
+            </section>
+
+
+        <!--home section-->
+
+
+        <!--admin section-->
+        <center>
+            <section class="admin" id="admin">
+                <h1 class="heading"><span> Login</span></h1>
+                <div class="box-container">
+                <div class="wrapper">
+                    <form action="" id="LoginForm">
+                        <h1>Login</h1>
+                        <div class="input-box" id="l-login">
+                            <input type="text" placeholder="username" id="LoginUsername" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="password" id="LoginPassword" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember</label>
+                            <a href="#">Forget password?</a>
+                        </div>
+
+                        <button type="submit" class="btn" id="Login">Login</button>
+
+                        <div class="register-link">
+                            <p>Don't have an Account? <a href="#">Register</a></p>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+                    
+            </section>
+        </center>
+        <!--admin section-->
+
+
+        <!--farmer section-->
+
+        <center>
+            <section class="farmer" id="farmer">
+                <h1 class="heading">Farmer <span>Register</span></h1>
+                <div class="container">
+                      <div class="form-box">
+                      <div class="button-box" >
+
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="signup()">Sign-Up</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                      </div>
+                        <center>
+                        <form class="signup-form" id="signup">
+                            <input type="text" class="form-field" placeholder="username" id="SignupUsername" required>
+                            <input type="email" class="form-field" placeholder="e-mail" id="SignupEmail" required>
+                            <input type="password" class="form-field" placeholder="password" id="SignupPassword" required>
+                         <input type="password" class="form-field" placeholder="confirm-password" id="SignupConfirmPassword" required> 
+
+                           <input  type="checkbox" class="checkbox"><span>Remember Password</span>
+                        
+                           <button type="submit" class="submit" id="Submit">Sign-Up</button>
+                           
+                           <div class="register-link">
+                            <p>Already have an Account? <a href="#">Login</a></p>
+
+                        </div>
+                        </form>
+                    </center>
+
+
+                        <form class="signup-form" id="register">
+                            <input type="text" class="form-field" placeholder="username"required>
+                            <!-- <input type="email" class="form-field" placeholder="e-mail" required> -->
+                            <input type="password" class="form-field" placeholder="password"required>
+                            <input type="text" class="form-field" placeholder="product" required>
+                            <input type="text" class="form-field" placeholder="quantity" required>
+                            <!-- <input type="text" class="form-field" placeholder="price" required> -->
+ 
+                            <input  type="checkbox" class="checkbox"><span>I Accept to Terms & Conditions</span>
+                            <center>
+                            <button type="submit" class="submit">Register</button>
+                            </center>
+                            <!-- <div class="register-link">
+                             <p>Already have an Account? <a href="#">Login</a></p> -->
+ 
+                         </div>
+                         </form>
+                    </div>
+                </div>
+            </section>
+        </center>
+        <!--farmer section-->
+
+
+
+        <!--customer section-->
+
+        <center>
+            <section class="customer" id="customer">
+                <h1 class="heading">Customer <span>Order</span></h1>
+                <div class="c-container">
+                      <div class="c-form-box">
+                      <div class="c-button-box" >
+
+                        <div id="c-btn"></div>
+                        <button type="button" class="c-toggle-btn" onclick="sign()">Sign-Up</button>
+                        <button type="button" class="c-toggle-btn" onclick="regis()">Order</button>
+                      </div>
+                        <center>
+                        <form class="c-signup-form" id="c-signup">
+                            <input type="text" class="c-form-field" placeholder="username"required>
+                            <input type="email" class="c-form-field" placeholder="e-mail" required>
+                            <input type="password" class="c-form-field" placeholder="password"required>
+                         <input type="password" class="c-form-field" placeholder="confirm-password"required> 
+
+                           <input  type="checkbox" class="c-checkbox"><span>Remember Password</span>
+                        
+                           <button type="submit" class="c-submit">Sign-Up</button>
+                           
+                           <div class="c-register-link">
+                            <p>Already have an Account? <a href="#">Login</a></p>
+
+                        </div>
+                        </form>
+                    </center>
+
+
+                        <form class="c-signup-form" id="c-register">
+                            <input type="text" class="c-form-field" id="c-username" placeholder="username"required >
+                            <input type="password" class="c-form-field" id="c-password" placeholder="password"required>
+                            <input type="text" class="c-form-field" id="c-product" placeholder="product" required>
+                            <input type="text" class="c-form-field" id="c-quantity" placeholder="quantity" required>
+                            <!-- <input type="text" class="form-field" placeholder="price" required> -->
+ 
+                            <input  type="checkbox" class="c-checkbox" id="c-submit"><span>I Accept to Terms & Conditions</span>
+                            <center>
+                            <button type="submit" class="c-submit">Order</button>
+                            </center>
+                            <!-- <div class="register-link">
+                             <p>Already have an Account? <a href="#">Login</a></p> -->
+ 
+                         </div>
+                         </form>
+                    </div>
+                </div>
+            </section>
+        </center>
+        <!--customer section-->
+
+
+
+
+
+        <!--feature section-->
+            <section class="features" id="features">
+                <h1 class="heading">Our <span> Features</span></h1>
+
+                <div class="box-container">
+                    <div class="box">
+                        <img src="image/feature-img-1.png">
+                        <h3>Fresh and Organic</h3>
+                        <p>The products are fresh and Organic which are directly imported from the farm.</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+
+                    <div class="box">
+                        <img src="image/feature-img-2.png">
+                        <h3>Fast Delivery</h3>
+                        <p>The products are delivered to the customer fastly.</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+
+                    <div class="box">
+                        <img src="image/feature-img-3.png">
+                        <h3>Cash on Delivery (Payments)</h3>
+                        <p>The payment process for the products is easy and cash on delivery too ...</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+            </section>
+
+        <!--feature section-->
+
+        <!--product section-->
+      
+        <section class="products" id="products">
+            <h1 class="heading"> Our <span>Products</span></h1>
+            <center>
+            <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="image/product-2.png">
+                        <h1>Onion</h1>
+                        <div class="'price">rs.40/- - rs.50/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="image/product-4.png">
+                        <h1>Cabbage</h1>
+                        <div class="'price">rs.20/- - rs.25/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="image/product-5.png">
+                        <h1>Potato</h1>
+                        <div class="'price">rs.20/- - rs.30/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            
+            <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img src="image/product-7.png">
+                        <h1>Carrot</h1>
+                        <div class="'price">rs.20/- - rs.35/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                    
+                    <div class="swiper-slide box">
+                        <img src="image/coriander.jpg">
+                        <h1>Coriander Leaf</h1>
+                        <div class="'price">rs.10/- - rs.15/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                    
+                    <div class="swiper-slide box">
+                        <img src="image/spinach1.webp">
+                        <h1>Spinach Leaf</h1>
+                        <div class="'price">rs.10/- - rs.20/-</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </center>
+        </section>
+        <!--product section-->
+
+
+        <!--footer section-->
+
+            <section class="contact" id="contact">
+                <h1 class="heading"><span>Contacts</span></h1>
+             <div class="box-container">
+                <div class="box">
+                    <h3>e-agri <i class="fa fa-shopping-basket"></i></h3>
+                    <p>Follow us on social media through links below</p>
+
+                    <div class="share">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>Contact info </h3>
+                    <a href="#" class="links"><i class="fa fa-phone"></i> 9345631083</a>
+                    <a href="#" class="links"><i class="fa fa-envelope"></i>keerthanapcse2004@gmail.com</a>
+                    <a href="#" class="links"><i class="fa fa-map-marker"></i>TamilNadu,India</a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Home</a>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Admin</a>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Farmer</a>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Customer</a>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Features</a>
+                    <a href="#" class="links"><i class="fa fa-arrow-right"></i>Products</a>
+                </div>
+             </div>
+        </section>
+
+        <!--footer section-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+        <script>
+
+//         const express = require('express');
+// const mysql = require('mysql');
+
+// const app = express();
+// const port = 3000;
+
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'password',
+//   database: 'ecommerce'
+// });
+
+// connection.connect(err => {
+//   if (err) throw err;
+//   console.log('Connected to MySQL database');
+// });
+
+// app.get('/products', (req, res) => {
+//   connection.query('SELECT * FROM products', (err, results) => {
+//     if (err) throw err;
+//     res.json(results);
+//   });
+// });
+
+// app.listen(port, () => {
+//   console.log(`Server is running on http://localhost:${port}`);
+// });
+
+
+
+
+document.getElementById('LoginForm').addEventListener('Login', async (e) => {
+  e.preventDefault();
+  const username = document.getElementById('LoginUsername').value;
+  const password = document.getElementById('LoginPassword').value;
+  
+  try {
+    const response = await fetch('/Login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+    });
+    if (response.ok) {
+      alert('Login successful');
+    } else {
+      alert('Invalid username or password');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+
+document.getElementById('signup').addEventListener('Submit', async (e) => {
+  e.preventDefault();
+  const username = document.getElementById('SignupUsername').value;
+  const email = document.getElementById('SignupEmail').value;
+  const password = document.getElementById('SignupPassword').value;
+  const confirmpassword = document.getElementById('SignupConfirmPassword').value;
+  
+  try {
+    const response = await fetch('/Signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+    });
+    if (response.ok) {
+      alert('Signup successful');
+    } else {
+      const errorMessage = await response.text();
+      alert(errorMessage);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+
+
+
+
+
+const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
+
+const app = express();
+const port = 3000;
+
+// Connect to SQLite database
+const db = new sqlite3.Database(':memory:');
+
+// Create users table
+db.serialize(() => {
+  db.run("CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT)");
+
+  // Insert dummy user
+  const stmt = db.prepare("INSERT INTO users VALUES (?, ?)");
+  stmt.run("admin", "adminpassword");
+  stmt.finalize();
+});
+
+app.use(express.urlencoded({ extended: true }));
+
+// Handle login
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, row) => {
+    if (err) {
+      res.status(500).send('Internal Server Error');
+    } else if (row) {
+      res.send('Login successful');
+    } else {
+      res.status(401).send('Invalid username or password');
+    }
+  });
+});
+
+// Handle signup
+app.post('/signup', (req, res) => {
+  const { username, password } = req.body;
+
+  db.run('INSERT INTO users VALUES (?, ?)', [username, password], (err) => {
+    if (err) {
+      res.status(400).send('Username already exists');
+    } else {
+      res.send('Signup successful');
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+</script>
+        <script src="script.js"></script>
+    </body>
+</html>

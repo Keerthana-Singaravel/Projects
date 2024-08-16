@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background:gray;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background:white;
+    margin:50px;
+    box-shadow: 0 30px 50px gray;
+}
+.top{
+    position: relative;
+    width:100%;
+    height:350px;
+    background: linear-gradient(45deg, rgb(60, 10, 211), rgb(131, 5, 131));
+    padding: 50px;
+}
+h3{
+    font-size: 3rem;
+    color:white;
+    text-align: left;
+    text-transform:uppercase;
+    line-height: 0.7em;
+    letter-spacing: 0.1em;
+}
+h3 span{
+
+    font-size:20;
+    font-weight:30;
+}
+.group{
+    position:relative;
+    display: grid;
+    gap:40px;
+    width:100%;
+    grid-template-columns: 2fr 3fr;
+    margin-top: 20px;
+}
+.group .imgbx{
+    position: relative;
+    width: 100%;
+}
+.group .imgbx img{
+    width: 45%;
+}
+.group i{
+    color:aliceblue;
+    font-size:1.1em;
+    text-align:bottom;
+}
+/* .top .group .rightside{
+    text-align: left;
+    padding:30px 40px 30px;
+} */
+.bottom{
+    position:relative;
+    display: grid;
+    margin: 30px 50px 0;
+    gap: 40px;
+    grid-template-columns: 2fr 3fr;
+}
+.bottom .left-side{
+    margin-top: 30px;
+}
+h4{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color:white;
+    background:rgb(60, 10, 211);
+    font-weight: 600;
+    padding: 0 10px;
+    margin-top: 20px;
+    display: inline-flex;
+}
+.contactinfo{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    gap :10px;
+    margin: 20px 0;
+}
+.contactinfo li{
+    list-style:none;
+    gap: 10px;
+}
+.contactinfo li .icon{
+    color:rgb(60, 10, 211);
+}
+.contactinfo li .text{
+    color:black;
+}
+.skills{
+    position: relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin: 20px 0;
+}
+.skills .skillsbox{
+    position:  relative;
+    display:grid;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+}
+.skills .skillsbox p{
+    color:black;
+}
+.skills .skillsbox .value{
+    position:  relative;
+    width: 100%;
+    height: 10px;
+    border: 2px solid gray;
+    background:white;
+}
+.skills .skillsbox .value::before{
+    content: '';
+    position: absolute;
+    width:var(--i);
+    height: 100%;
+    background:linear-gradient(45deg, rgb(16, 215, 233), rgb(131, 5, 131));
+}
+.adjustmargin{
+    margin-top:-10px;
+}
+.edu-group{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+.edu-groupbx{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.edu-groupbx p:nth-child(1){
+    font-weight: 500;
+}
+.edu-groupbx b{
+    font-weight: 500;
+    color:black;
+}
+.edu-groupbx b span{
+    position: relative;
+    top: -2px;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color:rgb(60, 10, 211);
+    text-decoration: underline;
+}
+.edu-groupbx b span:hover{
+    color:rgb(245, 8, 170);
+}
+.hobbies{
+    padding:0 50px 50px;
+
+}
+.hobbies ul{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: space-between;
+}
+.hobbies ul li{
+    list-style: none;
+    color:white;
+    width: calc(100% / 4);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column ;
+    gap:5px;
+    background: gray;
+    text-align: center;
+    cursor:pointer;
+}
+.hobbies ul li:hover{
+    background: linear-gradient(45deg, rgb(16, 215, 233), rgb(131, 5, 131));
+    color:black;
+}
+
+.hobbies ul li i{
+    font-size: 2em;
+}

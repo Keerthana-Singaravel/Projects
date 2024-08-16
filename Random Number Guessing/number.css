@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+}
+body{
+    width:100%;
+    height: 700px;
+    /* background: linear-gradient(-45deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #4ef056, #e9f474, #f9a825, #ff5722); */
+    background-image:url("images/red-maple-leaf.jpg");
+    position: absolute;
+    background-position: cover;
+    background-size: contain ;
+    background-repeat: repeat-x;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+ .container{
+    width:500px;
+    height:500px;
+    border:3px solid black;
+    border-radius: 0px 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding :10px;
+}
+.container h1{
+    text-align: center;
+    font-size: 1.9rem;
+    font-style: italic;
+    font-weight: 800;
+} 
+
+.container input{
+    font-size: 1.7rem;
+    color:black;
+    border: 3px solid black;
+    background-color: transparent;
+}
+.container .btn{
+    font-size: 1.3rem;
+    padding: 2px;
+    background-color: black;
+    color:white;
+    font-weight: 800;
+}
+
+.container p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthApp</title>
+    <link rel="stylesheet" href="health.css">
+    <head>
+        <!-- <link rel="stylesheet" href="boxicons.min.css"> -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      
+    </head>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="bx bxs-donate-heart bx-fade-right"><span>H</span>EALTH <span>C</span>ARE</i></a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#bmi">BMI</a>
+            <a href="#tips">HealthyTips</a>
+            <a href="#contact">Contact Us</a>
+            
+        </nav>
+         
+
+        <nav class="nav">
+            <a class="s-btn" href="#login"><i class='bx bx-user bx-tada-hover'><span>Login</span></i></a>
+
+            <!-- <a class="s-btn" href="#signup"><i class='bx bxs-user'><span>Sign-Up</span></i></a> -->
+        </nav>
+        
+    
+        <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+        <a href="#navbar" class="menu-btn" id="menu-btn"><i class='bx bx-menu'></i></a>
+        
+    </header>
+
+    <!-- home page -->
+    <section class="home" id="home">
+        <div class="image">
+            <img src="images/healthcare4.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Stay Safe,Stay Healthy</h3>
+            <!-- <img src="images/health.jpg" alt=""> -->
+            <p>Helps you to maintain healthy life and guide to consume an healthy food diet.</p>
+            <button class="btn" id="healthTestBtn">Hover Me!...</button>
+            <div class="message" id="message" style="display : none;">Think Positive and Stay Healthy...</div>
+        </div>
+    </section>
+
+    <!-- home page -->
+
+    <!-- login page -->
+    <section class="login" id="login">
+        <div class="container">
+            <div class="login-box">
+               <h1 class="bx-burst">LOG<span>IN</span></h1>
+               <div class="b">
+                <br><br><br>
+               <label for="name">UserName:</label><br><br>
+               <input type="text" id="name" name="name" required><br><br><br>
+               <label for="email">Email:</label><br><br>
+               <input type="email" id="email" name="email" required><br><br><br>
+               <label for="password">Password:</label><br><br>
+               <input type="password"id="password" name="password" required><br><br><br>
+               <button class="btn">login</button><br>
+               <a href="#sign-up">Doesn't have an account?</a>
+               </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- login page -->
+
+
+    <section class="sign-up" id="sign-up">
+        <div class="container">
+            <div class="login-box">
+                <h1 class="bx-burst">SIGN<span>-UP</span></h1>
+                <div class="b">
+                <label for="name">UserName:</label><br><br>
+               <input type="text" id="name" name="name" required><br><br>
+               <label for="email">Email:</label><br><br>
+               <input type="email" id="email" name="email" required><br><br>
+               <label for="password">Password:</label><br><br>
+               <input type="password"id="password" name="password" required><br><br>
+               <label for="password">Confirm Password:</label><br><br>
+               <input type="password"id="password" name="password" required><br><br>
+               <button class="btn">Register</button><br>
+               <a href="#login">Already have an account?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bmi -->
+    
+    <section class="bmi" id="bmi">
+        <div class="container">
+            <div class="box">
+                <h1 class="bx-burst"><span>BMI</span> Calculator</h1>
+                 <div class="form">
+                    <br><br>
+                    <label >Height (in meters):</label>
+                    <input type="text" id="height">
+                    <br><br>
+                    <label >Weight (in kilograms):</label>
+                    <input type="text" id="weight">
+                    <br><br>
+                    <button onclick="calculate()">Calculate BMI</button>
+                    <br><br>
+                    <h1 id="result">Result</h1>
+                    <h2 id="level"></h2>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- bmi -->
+
+
+    <!--- extra content of bmi--->
+
+
+    <section id="extraContentSection" style="display: none;">
+        <div class="container" >
+
+            <div id="underweightContent" class="extra-content" style="display: none;">
+                <div class="head">Gain Weight to get normal Weight.</div>
+                <div class="h">Some tips are.....</div>
+                <div class="card-container">
+                <div class="card">
+                     <img class="bx-fade-left"src="images/nutrition.jfif">
+                        <h1>Go Nutrient Dense.</h1>
+                        <p>Try to eat a variety of foods to get different vitamins and minerals.Foods that naturally are nutrient-rich include fruits and vegetables. Lean meats, fish, whole grains, dairy, legumes, nuts, and seeds also are high in nutrients. </p>
+                </div>
+                 <div class="card">
+                    <img class="bx-fade-down"src="images/yoga.jfif" alt="vegetables">
+                        <h1>Do less Workouts.</h1>
+                        <p>While too much aerobic exercise will burn calories and work against your weight goal, strength training can help. This includes weightlifting or yoga. You gain weight by building muscle.</p>
+                </div>
+                <div class="card">
+                    <img class="bx-fade-right"src="images/food.jpg" alt="vegetables">
+                        <h1>Eat More Frequently.</h1>
+                        <p>Slowly begin to eat 5 to 6 smaller meals during the day. Try to tune into your body to recognize when you might be hungry. But you may need to plan times to eat even if you aren't that hungry.</p>
+                </div> 
+            </div>
+            </div>   
+
+            <div id="normalWeightContent" class="extra-content" style="display: none;">
+                <!-- Extra information for individuals with normal weight. -->
+                <div class="head">You are in normal Weight.</div>
+                <div class="h">Some tips to maintain this.....</div>
+                <div class="card-container">
+                <div class="card">
+                     <img class="bx-fade-left" src="images/fruitvege.jfif">
+                        <h1>Eat more fruits and vegetables.</h1>
+                        <p>In addition to being high in water, nutrients, and fiber, they usually have very low energy density. This makes it possible to eat large servings without consuming excess calories. </p>
+                </div>
+                 <div class="card">
+                    <img class="bx-fade-down" src="images/sleep.jpg">
+                        <h1>Sleep at a time.</h1>
+                        <p>Good sleeping and at right time will maintain a normal weight.</p>
+                </div>
+                <div class="card">
+                    <img class="bx-fade-right" src="images/fiber.jfif">
+                        <h1>Eat More Fibres.</h1>
+                        <p>Fiber-rich foods may help with weight loss. Foods that contain water-soluble fiber may be especially helpful, since this type of fiber can help increase the feeling of fullness.</p>
+                </div> 
+                </div>
+            </div>
+
+            <div id="overweightContent" class="extra-content" style="display: none;">
+                <!-- Extra information for overweight individuals. -->
+                <div class="head">Lose weight to get normal Weight.</div>
+                <div class="h">Some tips are.....</div>
+               
+                <div class="card-container">
+                <div class="card">
+                     <img class="bx-fade-left" src="images/fats.jfif">
+                        <h1>Avoid eating more cholesterol foods.</h1>
+                        <p>Eating more oil content foods and high cholesterol foods will lead to gain weight .  </p>
+                </div>
+
+                 <div class="card">
+                    <img class="bx-fade-down" src="images/carbohydrate.jfif">
+                        <h1>Eat foods rich in carbohydrate.</h1>
+                        <p>Eating rich carbohydrate food contents will help us to loss the weight.</p>
+                </div>
+
+                <div class="card">
+                    <img class="bx-fade-right" src="images/fiber.jfif"> 
+                        <h1>Eat More Fibres.</h1>
+                        <p>Fiber-rich foods may help with weight loss. Foods that contain water-soluble fiber may be especially helpful, since this type of fiber can help increase the feeling of fullness.</p>
+                </div> 
+                </div>
+            </div>
+
+            <div id="obesityContent" class="extra-content" style="display: none;">
+                <!-- Extra information for individuals with obesity. -->
+                <div class="head">Lose weight to get normal Weight.</div>
+                <div class="h">Some tips are.....</div>
+               
+                <div class="card-container">
+                <div class="card">
+                     <img class="bx-fade-left" src="images/fats.jfif">
+                        <h1>Avoid eating more cholesterol foods.</h1>
+                        <p>Eating more oil content foods and high cholesterol foods will lead to gain weight .  </p>
+                </div>
+
+                 <div class="card">
+                    <img class="bx-fade-down" src="images/carbohydrate.jfif">
+                        <h1>Eat foods rich in carbohydrate.</h1>
+                        <p>Eating rich carbohydrate food contents will help us to loss the weight.</p>
+                </div>
+
+                <div class="card">
+                    <img class="bx-fade-right" src="images/fiber.jfif"> 
+                        <h1>Eat More Fibres.</h1>
+                        <p>Fiber-rich foods may help with weight loss. Foods that contain water-soluble fiber may be especially helpful, since this type of fiber can help increase the feeling of fullness.</p>
+                </div> 
+            </div>
+        
+    </section>
+
+    <!----extra content of bmi--->
+
+
+
+
+    <!-- HealthyTips -->
+
+      <section class="tips" id="tips">
+        <h1 class="heading"><span>Healthy </span> Tips</h1>
+        <div class="container">
+                <!-- <h1 class="heading"><span>Healthy </span> Tips</h1> -->
+             <!-- <div class="box-container">  -->
+                <div class="box">
+                    <img class="bx-flashing" src="images/water.jpg">
+                    <h3>Drink More Water</h3>
+                    <p>Consuming more water will keeps your body hydrate and healthy.</p>
+                    <!-- <a class="btn" onclick="click()">read more</a> -->
+
+                    <!-- <a class="btn" onclick="toggleContent('water')">read more</a> -->
+                    
+                    
+                    <a class="btn" onmouseover="toggleContent('water')" onmouseleave="toggleContent('water')">read more</a>
+                    <p id="waterContent" class="extra-content" style="display: none;">Drinking water regularly helps in flushing out toxins from the body and aids in digestion.</p>
+
+                </div>
+
+                <div class="box" >
+                    <img class="bx-flashing" src="images/exercise.jpg">
+                    <h3>Regular Exercise</h3>
+                    <p>Doing regular exercise will keep us healthy and fit.</p>
+                    <!-- <a  class="btn">read more</a> -->
+
+                    <!-- <a class="btn" onclick="toggleContent('exercise')">read more</a> -->
+
+                    <a class="btn" onmouseover="toggleContent('exercise')" onmouseleave="toggleContent('exercise')">read more</a>
+                    <p id="exerciseContent" class="extra-content" style="display: none;">Regular exercise not only improves physical health but also boosts mental well-being by reducing stress and anxiety.</p>
+                </div>
+
+                <div class="box">
+                    <img class="bx-flashing" src="images/vegetables.jpg">
+                    <h3>Eating more Vegetables</h3>
+                    <p>Consuming more vegetables which is rich in high proteins and vitamins will keep us more healthy.</p>
+                    <!-- <a class="btn">read more</a> -->
+
+                    <!-- <a class="btn" onclick="toggleContent('vegetables')">read more</a> -->
+
+
+                    <a class="btn" onmouseover="toggleContent('vegetables')" onmouseleave="toggleContent('vegetables')">read more</a>
+                    <p id="vegetablesContent" class="extra-content" style="display: none;">Vegetables are essential for a balanced diet as they provide essential nutrients for the body's optimal functioning.</p>
+                </div>
+
+                <div class="box">
+                    <img class="bx-flashing" src="images/sleeping.jpg">
+                    <h3>Sleep Well</h3>
+                    <p>Good Sleeping is good for healthy lifestyle.</p>
+                    <!-- <a class="btn" onclick="click()">read more</a> -->
+                    
+
+                    <!-- <a class="btn" onclick="toggleContent('sleeping')">read more</a> -->
+
+
+                    <a class="btn" onmouseover="toggleContent('sleeping')" onmouseleave="toggleContent('sleeping')">read more</a>
+                    <p id="sleepingContent" class="extra-content" style="display: none;">Adequate sleep is crucial for the body's recovery and repair processes, as well as for maintaining cognitive function and emotional well-being.</p>
+                </div>
+            <!-- </div> -->
+       </div>
+      </section>
+
+
+    <!-- HealthyTips -->
+
+
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <form  class="contactform" id="contactForm"
+            action="https://formspree.io/f/xkndygqj"
+             method="POST">
+                <h2 class="bx-burst"><span>Contact</span> Us</h2><br>
+                <br>
+                <label for="name">UserName:</label><br><br>
+                <input type="text" id="name" name="name" required><br><br><br>
+                <label for="email">Email:</label><br><br>
+                <input type="email" id="email" name="email" required><br><br><br>
+                <label for="message">Message:</label><br><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button class="btn">Send</button>
+            </form>
+        </div>
+       </section>
+
+    <!-- contact -->
+    
+</body>
+</html>
+<script src="health.js"></script>
+
+
+<script>
+    // document.getElementById("healthTestBtn").addEventListener("click", function() {
+    // document.getElementById("message").style.display = "block";});
+
+    document.getElementById("healthTestBtn").addEventListener("mouseover", function() {
+    document.getElementById("message").style.display = "block";
+});
+
+document.getElementById("healthTestBtn").addEventListener("mouseout", function() {
+    document.getElementById("message").style.display = "none";
+});
+
+
+</script>

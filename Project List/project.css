@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(238,174,202);
+  /* background: radial-gradient(circle,rgb(43, 180, 234) 0% ,rgb(52, 172, 196) 50%, rgb(115, 1, 119) 100%); */
+  background: radial-gradient(circle,rgb(241, 214, 63) 0% ,rgb(226, 168, 60) 25%, rgb(211, 24, 123) 50%,Mediumvioletred 75%, Darkmagenta 90%,black 100%);
+}
+
+.container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 0.75rem;
+}
+
+.box {
+  position: relative;
+  width: auto;
+  height: 75px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(59, 38, 38, 0.25);
+  
+}
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover::before {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.box .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.box .content .icon {
+  position: relative;
+  min-width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover .content .icon {
+  color: #fff;
+}
+
+.box .content .text h3 {
+  font-weight: 500;
+  color: var(--color);
+  transition: 0.5s ease-in-out;
+}
+
+.box .content .text button {
+  font-size: 0.9rem;
+  border:1px solid black;
+  color: black;
+  transition: 0.5s ease-in-out;
+  background-color: transparent;
+  padding: 2px;
+  border-radius: 10px;
+}
+.box .content .text button:hover{
+    background-color:transparent;
+    color:white;
+}
+
+.box:hover .content .text h3 {
+  color:white;
+}
+.box:hover .content .text button{
+  color: #fff;
+  border:1px solid white;
+}
